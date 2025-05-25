@@ -10,7 +10,7 @@
         --bg-color: #ffffff;
         --text-color: #222222;
         --text-muted: #666666;
-        --link-color: #0077cc;
+        --link-color: #0077cc; /* Your blue link color */
         --border-color: #cccccc;
         --header-bg: #f8f9fa;
       }
@@ -19,7 +19,7 @@
         --bg-color: #1a1a1a;
         --text-color: #e0e0e0;
         --text-muted: #a0a0a0;
-        --link-color: #4da6ff;
+        --link-color: #4da6ff; /* Your light blue link color */
         --border-color: #444444;
         --header-bg: #2a2a2a;
       }
@@ -98,8 +98,40 @@
       h2 {
         font-size: 1.4rem;
         margin-top: 2rem;
-        color: var(--text-color);
+        /* Ensure H2 itself doesn't have default underline */
+        text-decoration: none;
       }
+
+      /* Style for the anchor links around H2s */
+      .section-link {
+        color: var(--text-color); /* Initially matches the H2 text color */
+        text-decoration: none; /* No default underline */
+        cursor: pointer;
+        /* Transition for color and text-decoration-color */
+        transition: color 0.3s ease, text-decoration-color 0.3s ease, opacity 0.3s ease;
+      }
+
+      .section-link:hover {
+        /* Keep text color as is or use the subtle grey change */
+        color: var(--text-color); /* Maintain header text color */
+        text-decoration: underline; /* Add underline on hover */
+        text-decoration-color: var(--link-color); /* Make the underline blue */
+        opacity: 0.9; /* Subtle opacity change */
+      }
+
+      /* Optional: subtle text color change on hover, like before, but with blue underline */
+      .section-link:hover {
+        color: #444444; /* A darker grey for light theme */
+        text-decoration: underline;
+        text-decoration-color: var(--link-color); /* Blue underline */
+        opacity: 0.9;
+      }
+
+      [data-theme="dark"] .section-link:hover {
+        color: #bbbbbb; /* A lighter grey for dark theme */
+        text-decoration-color: var(--link-color); /* Light blue underline */
+      }
+
 
       hr {
         border: none;
@@ -197,10 +229,10 @@
       🧠
       <a href="https://stackoverflow.com/users/25230739/rajveer">Stack Overflow</a></p>
     <hr>
-    <h2>👨‍💻 About Me</h2>
+    <h2 id="about-me"><a href="#about-me" class="section-link">👨‍💻 About Me</a></h2>
     <p>I'm Rajveer Singh Saggu, a recreational programmer passionate about programming languages and open-source software. I enjoy building desktop applications, competitive coding, and utility tools.</p>
     <hr>
-    <h2>🛠️ Skills & Interests</h2>
+    <h2 id="skills-interests"><a href="#skills-interests" class="section-link">🛠️ Skills & Interests</a></h2>
     <ul>
       <li><strong>Programming Languages:</strong>
         Go, Rust, C, C++, Python, JavaScript</li>
@@ -208,7 +240,7 @@
         Competitive programming, desktop development, low-level programming, open-source projects</li>
     </ul>
     <hr>
-    <h2>📂 Notable Projects</h2>
+    <h2 id="notable-projects"><a href="#notable-projects" class="section-link">📂 Notable Projects</a></h2>
     <p>Here are a few of my highlighted SourceHut projects:</p>
     <ul>
       <li><p><a href="https://sr.ht/~rajveer2009/Codeforces_Problem_Sets"><strong>Codeforces Problem Sets</strong></a>:<br>Code for problems I solved on Codeforces –
@@ -229,7 +261,7 @@
           C++</p></li>
     </ul>
     <hr>
-    <h2>📫 Contact Me</h2>
+    <h2 id="contact-me"><a href="#contact-me" class="section-link">📫 Contact Me</a></h2>
     <ul>
       <li>📧 Email:
         <a href="mailto:rajveersinghsaggu2009@proton.me">rajveersinghsaggu2009@proton.me</a></li>
@@ -259,7 +291,7 @@
       function toggleTheme() {
         const current = document.documentElement.getAttribute('data-theme');
         const newTheme = current === 'dark' ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateThemeIcon(newTheme);
