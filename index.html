@@ -10,7 +10,7 @@
         --bg-color: #ffffff;
         --text-color: #222222;
         --text-muted: #666666;
-        --link-color: #0077cc; /* Your blue link color */
+        --link-color: #0077cc;
         --border-color: #cccccc;
         --header-bg: #f8f9fa;
       }
@@ -19,7 +19,7 @@
         --bg-color: #1a1a1a;
         --text-color: #e0e0e0;
         --text-muted: #a0a0a0;
-        --link-color: #4da6ff; /* Your light blue link color */
+        --link-color: #4da6ff;
         --border-color: #444444;
         --header-bg: #2a2a2a;
       }
@@ -98,38 +98,33 @@
       h2 {
         font-size: 1.4rem;
         margin-top: 2rem;
-        /* Ensure H2 itself doesn't have default underline */
         text-decoration: none;
       }
 
-      /* Style for the anchor links around H2s */
       .section-link {
-        color: var(--text-color); /* Initially matches the H2 text color */
-        text-decoration: none; /* No default underline */
+        color: var(--text-color);
+        text-decoration: none;
         cursor: pointer;
-        /* Transition for color and text-decoration-color */
         transition: color 0.3s ease, text-decoration-color 0.3s ease, opacity 0.3s ease;
       }
 
       .section-link:hover {
-        /* Keep text color as is or use the subtle grey change */
-        color: var(--text-color); /* Maintain header text color */
-        text-decoration: underline; /* Add underline on hover */
-        text-decoration-color: var(--link-color); /* Make the underline blue */
-        opacity: 0.9; /* Subtle opacity change */
+        color: var(--text-color);
+        text-decoration: underline;
+        text-decoration-color: var(--link-color);
+        opacity: 0.9;
       }
 
-      /* Optional: subtle text color change on hover, like before, but with blue underline */
       .section-link:hover {
-        color: #444444; /* A darker grey for light theme */
+        color: #444444;
         text-decoration: underline;
-        text-decoration-color: var(--link-color); /* Blue underline */
+        text-decoration-color: var(--link-color);
         opacity: 0.9;
       }
 
       [data-theme="dark"] .section-link:hover {
-        color: #bbbbbb; /* A lighter grey for dark theme */
-        text-decoration-color: var(--link-color); /* Light blue underline */
+        color: #bbbbbb;
+        text-decoration-color: var(--link-color);
       }
 
 
@@ -283,7 +278,6 @@
     <hr>
     <p><em>Copyright (C) 2025 Rajveer Singh Saggu</em></p>
     <script>
-      // Check for saved theme preference or default to light mode
       const currentTheme = localStorage.getItem('theme') || 'light';
       document.documentElement.setAttribute('data-theme', currentTheme);
       updateThemeIcon(currentTheme);
