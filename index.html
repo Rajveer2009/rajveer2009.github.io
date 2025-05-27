@@ -1,301 +1,288 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Rajveer Singh Saggu</title>
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/93126793?s=400&v=4">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer data-domain="rajveer2009.github.io" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
-    <style>
-      :root {
-        --bg-color: #ffffff;
-        --text-color: #222222;
-        --text-muted: #666666;
-        --link-color: #0077cc;
-        --border-color: #cccccc;
-        --header-bg: #f8f9fa;
-      }
-
-      [data-theme="dark"] {
-        --bg-color: #1a1a1a;
-        --text-color: #e0e0e0;
-        --text-muted: #a0a0a0;
-        --link-color: #4da6ff;
-        --border-color: #444444;
-        --header-bg: #2a2a2a;
-      }
-
-      * {
-        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        line-height: 1.6;
-        padding: 2rem 3rem;
-        padding-top: 3rem;
-        margin: 0;
-        color: var(--text-color);
-        background-color: var(--bg-color);
-        margin-right: auto;
-      }
-
-      .theme-toggle {
-        position: absolute;
-        top: 4rem;
-        right: 3rem;
-        background: var(--bg-color);
-        border: 1px solid var(--border-color);
-        border-radius: 8px;
-        width: auto;
-        height: auto;
-        padding: 0.5rem 0.75rem;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1rem;
-        z-index: 1000;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        font-family: inherit;
-        color: var(--text-color);
-      }
-
-      .theme-toggle:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-
-      [data-theme="dark"] .theme-toggle {
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-      }
-
-      [data-theme="dark"] .theme-toggle:hover {
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-      }
-
-      header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-bottom: 2rem;
-      }
-
-      header img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--border-color);
-      }
-
-      h1 {
-        font-size: 2rem;
-        margin: 0;
-        color: var(--text-color);
-      }
-
-      h2 {
-        font-size: 1.4rem;
-        margin-top: 2rem;
-        text-decoration: none;
-      }
-
-      .section-link {
-        color: var(--text-color);
-        text-decoration: none;
-        cursor: pointer;
-        transition: color 0.3s ease, text-decoration-color 0.3s ease, opacity 0.3s ease;
-      }
-
-      .section-link:hover {
-        color: var(--text-color);
-        text-decoration: underline;
-        text-decoration-color: var(--link-color);
-        opacity: 0.9;
-      }
-
-      .section-link:hover {
-        color: #444444;
-        text-decoration: underline;
-        text-decoration-color: var(--link-color);
-        opacity: 0.9;
-      }
-
-      [data-theme="dark"] .section-link:hover {
-        color: #bbbbbb;
-        text-decoration-color: var(--link-color);
-      }
-
-
-      hr {
-        border: none;
-        border-top: 3px dashed var(--border-color);
-        margin: 2rem 0;
-      }
-
-      ul {
-        padding-left: 1.2em;
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--link-color);
-        word-break: break-word;
-      }
-
-      a:hover {
-        text-decoration: underline;
-        opacity: 0.8;
-      }
-
-      p, li {
-        font-size: 1rem;
-        color: var(--text-color);
-      }
-
-      em {
-        color: var(--text-muted);
-      }
-
-      strong {
-        color: var(--text-color);
-      }
-
-      @media (max-width: 600px) {
-        body {
-          padding: 1.2rem;
-          padding-top: 3rem;
-        }
-
-        .theme-toggle {
-          top: 3rem;
-          right: 1.2rem;
-          padding: 0.4rem 0.6rem;
-          font-size: 0.9rem;
-        }
-
-        header {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        header img {
-          width: 64px;
-          height: 64px;
-        }
-
-        h1 {
-          font-size: 1.6rem;
-        }
-
-        h2 {
-          font-size: 1.2rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
-      <span id="theme-icon">🌙</span>
-    </button>
-    <header>
-      <img src="https://avatars.githubusercontent.com/u/93126793?s=400&v=4" alt="Rajveer Singh Saggu">
-      <h1>👋 Rajveer Singh Saggu</h1>
-    </header>
-    <p><strong>he/him/his</strong><br>
-      Recreational Programmer<br>
-      📍
-      <a href="https://www.google.co.in/maps/space/mars">Mars</a><br>
-      🌐
-      <a href="https://rajveer2009.github.io">Website</a><br>
-      📧
-      <a href="mailto:rajveersinghsaggu2009@proton.me">rajveersinghsaggu2009@proton.me</a><br>
-      🐙
-      <a href="https://github.com/Rajveer2009">GitHub</a><br>
-      🔗
-      <a href="https://sr.ht/~rajveer2009/">SourceHut</a><br>
-      🔗
-      <a href="https://codeforces.com/profile/rajveer2009">Codeforces</a><br>
-      🔗
-      <a href="https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/">LinkedIn</a><br>
-      🐦
-      <a href="https://x.com/bot_rajveer">X (formerly Twitter)</a><br>
-      🧠
-      <a href="https://stackoverflow.com/users/25230739/rajveer">Stack Overflow</a></p>
-    <hr>
-    <h2 id="about-me"><a href="#about-me" class="section-link">👨‍💻 About Me</a></h2>
-    <p>I'm Rajveer Singh Saggu, a recreational programmer passionate about programming languages and open-source software. I enjoy building desktop applications, competitive coding, and utility tools.</p>
-    <hr>
-    <h2 id="skills-interests"><a href="#skills-interests" class="section-link">🛠️ Skills & Interests</a></h2>
-    <ul>
-      <li><strong>Programming Languages:</strong>
-        Go, Rust, C, C++, Python, JavaScript</li>
-      <li><strong>Interests:</strong>
-        Competitive programming, desktop development, low-level programming, open-source projects</li>
-    </ul>
-    <hr>
-    <h2 id="notable-projects"><a href="#notable-projects" class="section-link">📂 Notable Projects</a></h2>
-    <p>Here are a few of my projects:</p>
-    <ul>
-      <li><p><a href="https://sr.ht/~rajveer2009/Codeforces_Problem_Sets"><strong>Codeforces Problem Sets</strong></a>:<br>Code for problems I solved on Codeforces –
-          <a href="https://codeforces.com/profile/rajveer2009">my profile</a><br>
-          <strong>Technologies Used:</strong>
-          C++, STL, Algorithms</p></li>
-      <li><p><a href="https://sr.ht/~rajveer2009/System-Monitor"><strong>System Monitor</strong></a>:<br>A desktop application built with Wails that displays real-time CPU and memory usage.<br>
-          <strong>Technologies Used:</strong>
-          Go, Wails, HTML/CSS/JavaScript</p></li>
-      <li><p><a href="https://sr.ht/~rajveer2009/Random-Number-Generator"><strong>Random Number Generator</strong></a>:<br>A Wails-based desktop app that generates random numbers within a user-defined range. Includes dark mode and input validation.<br>
-          <strong>Technologies Used:</strong>
-          Go, Wails, HTML/CSS/JavaScript</p></li>
-      <li><p><a href="https://sr.ht/~rajveer2009/rcode"><strong>rcode</strong></a>:<br>A simple C++ program to encode/decode strings by shifting ASCII characters with an offset.<br>
-          <strong>Technologies Used:</strong>
-          C++</p></li>
-      <li><p><a href="https://sr.ht/~rajveer2009/PrimeChecker"><strong>PrimeChecker</strong></a>:<br>A C++ utility to check if a number is prime using square root optimization.<br>
-          <strong>Technologies Used:</strong>
-          C++</p></li>
-    </ul>
-    <hr>
-    <h2 id="contact-me"><a href="#contact-me" class="section-link">📫 Contact Me</a></h2>
-    <ul>
-      <li>📧 Email:
-        <a href="mailto:rajveersinghsaggu2009@proton.me">rajveersinghsaggu2009@proton.me</a></li>
-      <li>🌐 Website:
-        <a href="https://rajveer2009.github.io">https://rajveer2009.github.io</a></li>
-      <li>🐙 GitHub:
-        <a href="https://github.com/Rajveer2009">https://github.com/Rajveer2009</a></li>
-      <li>🔗 SourceHut:
-        <a href="https://sr.ht/~rajveer2009/">https://sr.ht/~rajveer2009/</a></li>
-      <li>🔗 Codeforces:
-        <a href="https://codeforces.com/profile/rajveer2009">https://codeforces.com/profile/rajveer2009</a></li>
-      <li>🔗 LinkedIn:
-        <a href="https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/">https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/</a></li>
-      <li>🐦 X (Twitter):
-        <a href="https://x.com/bot_rajveer">https://x.com/bot_rajveer</a></li>
-      <li>🧠 Stack Overflow:
-        <a href="https://stackoverflow.com/users/25230739/rajveer">https://stackoverflow.com/users/25230739/rajveer</a></li>
-    </ul>
-    <hr>
-    <p><em>Copyright (C) 2025 Rajveer Singh Saggu</em></p>
-    <script>
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      updateThemeIcon(currentTheme);
-
-      function toggleTheme() {
-        const current = document.documentElement.getAttribute('data-theme');
-        const newTheme = current === 'dark' ? 'light' : 'dark';
-
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-      }
-
-      function updateThemeIcon(theme) {
-        const icon = document.getElementById('theme-icon');
-        icon.textContent = theme === 'dark' ? '☀️' : '🌙';
-      }
-    </script>
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rajveer Singh Saggu</title>
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://avatars.githubusercontent.com/u/93126793?s=400&v=4"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            defer
+            data-domain="rajveer2009.github.io"
+            src="https://plausible.io/js/script.outbound-links.tagged-events.js"
+        ></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+        >
+            <span id="theme-icon">🌙</span>
+        </button>
+        <header>
+            <img
+                src="https://avatars.githubusercontent.com/u/93126793?s=400&v=4"
+                alt="Rajveer Singh Saggu"
+            />
+            <h1>
+                👋
+                <span id="nameInHeader" class="clickable-name"
+                    >Rajveer Singh Saggu</span
+                >
+            </h1>
+        </header>
+        <p>
+            <strong>he/him/his</strong><br />
+            Recreational Programmer<br />
+            📍
+            <a href="https://www.google.co.in/maps/space/mars">Mars</a><br />
+            🌐
+            <a href="https://rajveer2009.github.io">Website</a><br />
+            📧
+            <a href="mailto:rajveersinghsaggu2009@proton.me"
+                >rajveersinghsaggu2009@proton.me</a
+            ><br />
+            🐙
+            <a href="https://github.com/Rajveer2009">GitHub</a><br />
+            🔗
+            <a href="https://sr.ht/~rajveer2009/">SourceHut</a><br />
+            🔗
+            <a href="https://codeforces.com/profile/rajveer2009">Codeforces</a
+            ><br />
+            🔗
+            <a href="https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/"
+                >LinkedIn</a
+            ><br />
+            🐦
+            <a href="https://x.com/bot_rajveer">X (formerly Twitter)</a><br />
+            🧠
+            <a href="https://stackoverflow.com/users/25230739/rajveer"
+                >Stack Overflow</a
+            >
+        </p>
+        <hr />
+        <h2 id="about-me">
+            <a href="#about-me" class="section-link">👨‍💻 About Me</a>
+        </h2>
+        <p>
+            I'm
+            <span id="nameInAbout" class="clickable-name"
+                >Rajveer Singh Saggu</span
+            >, a recreational programmer passionate about programming languages
+            and open-source software. I enjoy building desktop applications,
+            competitive coding, and utility tools.
+        </p>
+        <hr />
+        <h2 id="skills-interests">
+            <a href="#skills-interests" class="section-link"
+                >🛠️ Skills & Interests</a
+            >
+        </h2>
+        <ul>
+            <li>
+                <strong>Programming Languages:</strong> Go, Rust, C, C++,
+                Python, JavaScript
+            </li>
+            <li>
+                <strong>Interests:</strong> Competitive programming, desktop
+                development, low-level programming, open-source projects
+            </li>
+        </ul>
+        <hr />
+        <h2 id="notable-projects">
+            <a href="#notable-projects" class="section-link"
+                >📂 Notable Projects</a
+            >
+        </h2>
+        <p>Here are a few of my projects:</p>
+        <ul>
+            <li>
+                <p>
+                    <a href="https://sr.ht/~rajveer2009/Codeforces_Problem_Sets"
+                        ><strong>Codeforces Problem Sets</strong></a
+                    >:<br />Code for problems I solved on Codeforces –
+                    <a href="https://codeforces.com/profile/rajveer2009"
+                        >my profile</a
+                    ><br />
+                    <strong>Technologies Used:</strong>
+                    C++, STL, Algorithms
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://sr.ht/~rajveer2009/System-Monitor"
+                        ><strong>System Monitor</strong></a
+                    >:<br />A desktop application built with Wails that displays
+                    real-time CPU and memory usage.<br />
+                    <strong>Technologies Used:</strong>
+                    Go, Wails, HTML/CSS/JavaScript
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://sr.ht/~rajveer2009/Random-Number-Generator"
+                        ><strong>Random Number Generator</strong></a
+                    >:<br />A Wails-based desktop app that generates random
+                    numbers within a user-defined range. Includes dark mode and
+                    input validation.<br />
+                    <strong>Technologies Used:</strong>
+                    Go, Wails, HTML/CSS/JavaScript
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://sr.ht/~rajveer2009/rcode"
+                        ><strong>rcode</strong></a
+                    >:<br />A simple C++ program to encode/decode strings by
+                    shifting ASCII characters with an offset.<br />
+                    <strong>Technologies Used:</strong>
+                    C++
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://sr.ht/~rajveer2009/PrimeChecker"
+                        ><strong>PrimeChecker</strong></a
+                    >:<br />A C++ utility to check if a number is prime using
+                    square root optimization.<br />
+                    <strong>Technologies Used:</strong>
+                    C++
+                </p>
+            </li>
+        </ul>
+        <hr />
+        <h2 id="contact-me">
+            <a href="#contact-me" class="section-link">📫 Contact Me</a>
+        </h2>
+        <ul>
+            <li>
+                📧 Email:
+                <a href="mailto:rajveersinghsaggu2009@proton.me"
+                    >rajveersinghsaggu2009@proton.me</a
+                >
+            </li>
+            <li>
+                🌐 Website:
+                <a href="https://rajveer2009.github.io"
+                    >https://rajveer2009.github.io</a
+                >
+            </li>
+            <li>
+                🐙 GitHub:
+                <a href="https://github.com/Rajveer2009"
+                    >https://github.com/Rajveer2009</a
+                >
+            </li>
+            <li>
+                🔗 SourceHut:
+                <a href="https://sr.ht/~rajveer2009/"
+                    >https://sr.ht/~rajveer2009/</a
+                >
+            </li>
+            <li>
+                🔗 Codeforces:
+                <a href="https://codeforces.com/profile/rajveer2009"
+                    >https://codeforces.com/profile/rajveer2009</a
+                >
+            </li>
+            <li>
+                🔗 LinkedIn:
+                <a
+                    href="https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/"
+                    >https://www.linkedin.com/in/rajveer-singh-saggu-7579071b7/</a
+                >
+            </li>
+            <li>
+                🐦 X (Twitter):
+                <a href="https://x.com/bot_rajveer"
+                    >https://x.com/bot_rajveer</a
+                >
+            </li>
+            <li>
+                🧠 Stack Overflow:
+                <a href="https://stackoverflow.com/users/25230739/rajveer"
+                    >https://stackoverflow.com/users/25230739/rajveer</a
+                >
+            </li>
+        </ul>
+        <hr />
+        <p>
+            <em
+                ><span id="licenseTrigger" class="clickable-text"
+                    >Copyright</span
+                >
+                (C) 2025
+                <span id="nameInCopyright" class="clickable-name"
+                    >Rajveer Singh Saggu</span
+                ></em
+            >
+        </p>
+        <div id="gameDialogOverlay" class="dialog-overlay">
+            <div id="gameDialog" class="dialog-content">
+                <button id="closeGameDialogButton" class="close-dialog-button">
+                    &times;
+                </button>
+                <h3>Snake Game!</h3>
+                <canvas width="400" height="400" id="gameCanvas"></canvas>
+            </div>
+        </div>
+        <div id="licenseDialogOverlay" class="dialog-overlay">
+            <div id="licenseDialog" class="dialog-content">
+                <button
+                    id="closeLicenseDialogButton"
+                    class="close-dialog-button"
+                >
+                    &times;
+                </button>
+                <h3>License Information</h3>
+                <div class="license-text-container">
+                    <p>
+                        Copyright (c) 2025 Rajveer Singh Saggu<br />
+                        <a
+                            href="https://rajveer2009.github.io/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >https://rajveer2009.github.io/</a
+                        ><br />
+                        &lt;<a href="mailto:rajveersinghsaggu2009@proton.me"
+                            >rajveersinghsaggu2009@proton.me</a
+                        >&gt;
+                    </p>
+                    <p>
+                        Permission is hereby granted, free of charge, to any
+                        person obtaining a copy of this software and associated
+                        documentation files (the "Software"), to deal in the
+                        Software without restriction, including without
+                        limitation the rights to use, copy, modify, merge,
+                        publish, distribute, sublicense, and/or sell copies of
+                        the Software, and to permit persons to whom the Software
+                        is furnished to do so, subject to the following
+                        conditions:
+                    </p>
+                    <p>
+                        The above copyright notice and this permission notice
+                        shall be included in all copies or substantial portions
+                        of the Software.
+                    </p>
+                    <p>
+                        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+                        ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+                        TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+                        PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+                        SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+                        CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+                        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+                        IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+                        DEALINGS IN THE SOFTWARE.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
