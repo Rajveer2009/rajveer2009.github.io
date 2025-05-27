@@ -172,10 +172,6 @@ strong {
     color: var(--text-color);
 }
 
-.clickable-name {
-    cursor: pointer;
-}
-
 .clickable-text {
     cursor: pointer;
     transition: color 0.2s ease;
@@ -184,6 +180,10 @@ strong {
 .clickable-text:hover {
     text-decoration: underline;
     color: var(--clickable-text-hover-color);
+}
+
+#nameInAbout {
+    font-weight: bold;
 }
 
 @media (max-width: 600px) {

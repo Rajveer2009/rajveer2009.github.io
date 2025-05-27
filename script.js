@@ -161,8 +161,23 @@ document.addEventListener("DOMContentLoaded", () => {
     if (gameDialogOverlay) {
       gameDialogOverlay.style.display = "flex";
 
-      resetSnakeGame();
-      if (!gameLoopId) gameLoop();
+      isPaused = false;
+
+      if (!gameLoopId && score === 0) {
+        resetSnakeGame();
+      }
+
+      if (!gameLoopId) {
+        gameLoop();
+      }
+
+      if (gameDialogTitle) {
+        if (score >= 1) {
+          gameDialogTitle.textContent = `Score: ${score}`;
+        } else {
+          gameDialogTitle.textContent = "Snake Game!";
+        }
+      }
     }
   }
 
@@ -173,11 +188,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (gameLoopId) {
         cancelAnimationFrame(gameLoopId);
         gameLoopId = null;
-      }
-      isPaused = false;
-
-      if (gameDialogTitle) {
-        gameDialogTitle.textContent = "Snake Game!";
       }
     }
   }
@@ -191,40 +201,32 @@ document.addEventListener("DOMContentLoaded", () => {
     closeGameDialogButton.addEventListener("click", closeGameDialog);
 
   document.addEventListener("keydown", (e) => {
-    if (
-      gameDialogOverlay &&
-      gameDialogOverlay.style.display === "flex" &&
-      !isPaused
-    ) {
-      if (e.key === "ArrowLeft" && snake.dx === 0) {
-        snake.dx = -grid;
-        snake.dy = 0;
-      } else if (e.key === "ArrowUp" && snake.dy === 0) {
-        snake.dy = -grid;
-        snake.dx = 0;
-      } else if (e.key === "ArrowRight" && snake.dx === 0) {
-        snake.dx = grid;
-        snake.dy = 0;
-      } else if (e.key === "ArrowDown" && snake.dy === 0) {
-        snake.dy = grid;
-        snake.dx = 0;
+    if (gameDialogOverlay && gameDialogOverlay.style.display === "flex") {
+      if (!isPaused) {
+        if (e.key === "ArrowLeft" && snake.dx === 0) {
+          snake.dx = -grid;
+          snake.dy = 0;
+        } else if (e.key === "ArrowUp" && snake.dy === 0) {
+          snake.dy = -grid;
+          snake.dx = 0;
+        } else if (e.key === "ArrowRight" && snake.dx === 0) {
+          snake.dx = grid;
+          snake.dy = 0;
+        } else if (e.key === "ArrowDown" && snake.dy === 0) {
+          snake.dy = grid;
+          snake.dx = 0;
+        }
       }
-    }
 
-    if (
-      gameDialogOverlay &&
-      gameDialogOverlay.style.display === "flex" &&
-      e.key === " "
-    ) {
-      e.preventDefault();
-      togglePause();
-    } else if (
-      gameDialogOverlay &&
-      gameDialogOverlay.style.display === "flex" &&
-      e.key === "Escape"
-    ) {
-      if (isPaused) {
-        closeGameDialog();
+      if (e.key === " ") {
+        e.preventDefault();
+        togglePause();
+      } else if (e.key === "Escape") {
+        if (isPaused) {
+          closeGameDialog();
+        } else {
+          togglePause();
+        }
       }
     }
   });
