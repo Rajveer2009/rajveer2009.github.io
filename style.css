@@ -1,0 +1,89 @@
+body {
+    font-family: "JetBrains Mono", monospace;
+    background: #0d1117;
+    color: #e6edf3;
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 2px solid #30363d;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0 0 8px 0;
+    color: #f0f6fc;
+    font-weight: 500;
+}
+
+.subtitle {
+    color: #7d8590;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+p {
+    margin: 16px 0 30px 0;
+}
+
+.project-card {
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 20px;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+}
+
+.project-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #79c0ff;
+    margin-bottom: 12px;
+}
+
+.links {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.links li {
+    margin: 8px 0;
+}
+
+.links a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.links a:hover {
+    color: #79c0ff;
+}
+
+.username {
+    color: #f78166;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.username:hover {
+    color: #ffa28b;
+}
